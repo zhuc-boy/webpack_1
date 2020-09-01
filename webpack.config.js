@@ -10,7 +10,8 @@ module.exports = {
     entry:path.join(__dirname, "src/js/main.js"),
     output: {
         path: path.resolve(__dirname, "dist"),
-        filename: "[name][hash].js"
+        filename: "[name].[chunkhash].js",
+        chunkFilename: '[name].[contenthash].js',
     },
     module: {
         rules: [
